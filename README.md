@@ -1,25 +1,48 @@
-# CODING AGENTS: READ THIS FIRST
+# HERAMO — Homepage
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Trang chủ marketing cho **HERAMO** (dịch vụ giặt ủi / vệ sinh cao cấp tại TP.HCM).
+Static site thuần HTML/CSS/JS, không cần build step — mở `index.html` hoặc trỏ một
+static host bất kỳ vào thư mục này là chạy.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+## Cấu trúc
 
-## What you should do — IMPORTANT
+| File / thư mục   | Vai trò |
+|------------------|---------|
+| `index.html`     | Toàn bộ markup của trang (nguồn duy nhất, ngôn ngữ mặc định: tiếng Việt). |
+| `heramo.css`     | Toàn bộ style (design tokens, layout, responsive, popup, animations). |
+| `heramo.js`      | Tương tác + bảng dịch VN/EN (`I18N`) và logic áp dụng. |
+| `assets/`        | Hình ảnh, logo, icon dùng trên trang. |
+| `chats/`         | Transcript quá trình thiết kế (giữ lại làm tư liệu, không phải code). |
 
-**Read the chat transcripts first.** There are 2 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+## Song ngữ (VN / EN)
 
-**Read `project/Heramo Homepage.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+Thay vì nhân bản toàn bộ HTML cho mỗi ngôn ngữ, mỗi phần tử có nội dung khác nhau
+giữa 2 ngôn ngữ được gắn khoá:
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+- `data-i18n="tN"` — đổi phần chữ (innerHTML) của phần tử.
+- `data-i18n-attr="placeholder=aN,alt=aM"` — đổi thuộc tính (placeholder, alt, aria-label, title).
 
-## About the design files
+Bảng dịch nằm trong `heramo.js` (`const I18N = { text: {...}, attr: {...} }`).
+Khi bấm nút **VN / EN**, `switchLang()` chỉ cập nhật đúng những phần tử đó — nên
+mọi listener, hình ảnh và trạng thái động (popup, carousel, "đọc thêm bài viết"…)
+đều được giữ nguyên, không reload cả trang như bản prototype gốc.
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+## Tính năng tương tác
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+- Thanh điều hướng dính + dropdown "Dịch vụ" (desktop hover, mobile drawer).
+- Thanh khuyến mãi + popup lấy mã (tự bật lần đầu khi cuộn tới phần Dịch vụ),
+  nhập tên/SĐT → hiện mã, nút copy kèm toast thông báo.
+- Carousel 4 tiện ích app (tự chạy, tạm dừng, điều hướng).
+- Lazy-load video YouTube, marquee logo báo chí / đối tác chạy vô tận.
+- "Đọc thêm bài viết" hiện thêm 3 bài mỗi lần bấm.
+- Đếm số liệu khi cuộn tới, nút liên hệ nổi (Zalo / Hotline / Messenger).
 
-## Bundle contents
+## Chạy thử
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Heramo website homepage` project files (HTML prototypes, assets, components)
+```bash
+# mở trực tiếp
+xdg-open index.html            # hoặc: open index.html (macOS)
+
+# hoặc serve tĩnh (khuyến nghị, để đường dẫn tương đối hoạt động chuẩn)
+python3 -m http.server 8000    # rồi mở http://localhost:8000
+```

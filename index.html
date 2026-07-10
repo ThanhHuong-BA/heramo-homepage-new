@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giặt Ủi, Vệ Sinh Cao Cấp | HERAMO – Spa Đồ Hiệu, Giao Nhận Tận Nhà</title>
+  <meta name="description" content="HERAMO – dịch vụ giặt ủi, vệ sinh cao cấp và spa đồ hiệu, giao nhận tận nhà tại TP.HCM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="heramo.css">
+  <style>.press-source::before{display:none !important}</style>
+</head>
+<body>
+<div id="page-root">
+<!-- NAV -->
+<nav>
+  <a href="https://heramo.com/" target="_blank" class="nav-logo">
+    <img src="assets/heramo-logo.png" alt="HERAMO">
+  </a>
+  <ul class="nav-links">
+    <li data-i18n="t0"><a href="https://heramo.com/ve-chung-toi" target="_blank">Về chúng tôi</a></li>
+    <li class="nav-dd-wrap" onmouseenter="clearTimeout(this._ht);this.classList.add('open')" onmouseleave="var el=this;el._ht=setTimeout(function(){el.classList.remove('open')},250)"><a href="#services" class="nav-dd-trigger" data-i18n="t1">Dịch vụ <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="margin-left:2px"><polyline points="6 9 12 15 18 9"></polyline></svg></a><div class="nav-dropdown" data-i18n="t2"><a href="https://heramo.com/giat-say-giat-ui" target="_blank">Giặt sấy</a><a href="https://heramo.com/expat-laundry" target="_blank">Laundry for Expat</a><a href="https://heramo.com/giat-hap-giat-kho" target="_blank">Giặt hấp, giặt khô</a><a href="https://heramo.com/bag-spa-cleaning-ve-sinh-tui-xach" target="_blank">Vệ sinh, spa túi xách</a><a href="https://heramo.com/ve-sinh-giat-giay" target="_blank">Vệ sinh giày</a><a href="https://heramo.com/shoe-repair-sua-chua-giay" target="_blank">Spa, sửa chữa giày</a><a href="https://heramo.com/ve-sinh-giat-sofa-nem-rem-tham" target="_blank">Vệ sinh sofa, nệm, rèm, thảm</a><a href="https://heramo.com/ve-sinh-may-lanh" target="_blank">Vệ sinh máy lạnh</a></div></li>
+    <li data-i18n="t3"><a href="#stores">Cửa hàng</a></li>
+    <li data-i18n="t4"><a href="https://heramo.com/giat-ui-cong-nghiep-ve-sinh-van-phong-spa-khach-san-nha-hang" target="_blank">Đối tác</a></li>
+    <li data-i18n="t5"><a href="https://heramo.com/tuyen-dung" target="_blank">Tuyển dụng</a></li>
+    <li data-i18n="t6"><a href="https://heramo.com/" target="_blank" class="btn-primary nav-cta-desktop" style="font-size:14px;padding:10px 24px;font-weight:800;color:#0C0C0C;">Đặt dịch vụ →</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="openDrawer()" aria-label="Menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+  </button>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-backdrop" onclick="closeDrawer()"></div>
+  <div class="nav-drawer-panel">
+    <button class="nav-drawer-close" onclick="closeDrawer()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+    <ul class="nav-drawer-links">
+      <li data-i18n="t7"><a href="https://heramo.com/ve-chung-toi" target="_blank" onclick="closeDrawer()">Về chúng tôi</a></li>
+      <li class="drawer-dd-wrap"><a href="javascript:void(0)" onclick="this.parentElement.classList.toggle('open')" class="drawer-dd-trigger" data-i18n="t8">Dịch vụ <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="margin-left:4px;transition:transform .2s"><polyline points="6 9 12 15 18 9"></polyline></svg></a><ul class="drawer-dd-list"><li data-i18n="t9"><a href="https://heramo.com/giat-say-giat-ui" target="_blank" onclick="closeDrawer()">Giặt sấy</a></li><li><a href="https://heramo.com/expat-laundry" target="_blank" onclick="closeDrawer()">Laundry for Expat</a></li><li data-i18n="t10"><a href="https://heramo.com/giat-hap-giat-kho" target="_blank" onclick="closeDrawer()">Giặt hấp, giặt khô</a></li><li data-i18n="t11"><a href="https://heramo.com/bag-spa-cleaning-ve-sinh-tui-xach" target="_blank" onclick="closeDrawer()">Vệ sinh, spa túi xách</a></li><li data-i18n="t12"><a href="https://heramo.com/ve-sinh-giat-giay" target="_blank" onclick="closeDrawer()">Vệ sinh giày</a></li><li data-i18n="t13"><a href="https://heramo.com/shoe-repair-sua-chua-giay" target="_blank" onclick="closeDrawer()">Spa, sửa chữa giày</a></li><li data-i18n="t14"><a href="https://heramo.com/ve-sinh-giat-sofa-nem-rem-tham" target="_blank" onclick="closeDrawer()">Vệ sinh sofa, nệm, rèm, thảm</a></li><li data-i18n="t15"><a href="https://heramo.com/ve-sinh-may-lanh" target="_blank" onclick="closeDrawer()">Vệ sinh máy lạnh</a></li></ul></li>
+      <li data-i18n="t16"><a href="#stores" onclick="closeDrawer()">Cửa hàng</a></li>
+      <li data-i18n="t17"><a href="https://heramo.com/giat-ui-cong-nghiep-ve-sinh-van-phong-spa-khach-san-nha-hang" target="_blank" onclick="closeDrawer()">Trở thành đối tác</a></li>
+      <li data-i18n="t18"><a href="https://heramo.com/tuyen-dung" target="_blank" onclick="closeDrawer()">Tuyển dụng</a></li>
+    </ul>
+    <div class="nav-drawer-cta" data-i18n="t19">
+      <a href="https://heramo.com/" target="_blank" class="btn-primary" style="width:100%;justify-content:center;" onclick="closeDrawer()">Đặt dịch vụ ngay →</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROMO BAR -->
+<div class="promo-bar" id="promo-bar">
+  <div class="promo-bar-text" data-i18n="t20">
+    <span class="promo-badge">ƯU ĐÃI</span>
+    Freeship 2 chiều tối đa 50K cho đơn đầu tiên
+  </div>
+  <div class="promo-actions" data-i18n="t21">
+    <a href="#" class="promo-cta" onclick="openPromoPopup(event)">Lấy mã ngay</a>
+    <button class="promo-close" onclick="closePromoBar()">×</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-copy">
+    <div class="hero-visual">
+      <img src="assets/hero-new.png" alt="HERAMO - Hệ thống giặt ủi vệ sinh cao cấp tại TP.HCM và app đặt dịch vụ" data-i18n-attr="alt=a0">
+    </div>
+    <div class="hero-text">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-line"></span>
+      Less LAUNDRY MORE LOVE
+    </div>
+    <h1 class="hero-h1" data-i18n="t22">HERAMO - Dịch vụ<br><span class="kw">Giặt Ủi, Vệ Sinh</span><br>Cao Cấp</h1>
+    <p class="hero-sub" data-i18n="t23">Giao đồ cho HERAMO - <em>an tâm như giao đồ cho mẹ</em></p>
+    <div class="hero-bullets">
+      <div class="hero-bullet">
+        <div class="hero-bullet-icon">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+        </div>
+        <div class="hero-bullet-text" data-i18n="t24"><strong>Đa dịch vụ:</strong> Vệ sinh spa giày, giặt hấp đồ hiệu, spa túi xách, giặt ủi, vệ sinh sofa · nệm · rèm · thảm &amp; máy lạnh</div>
+      </div>
+      <div class="hero-bullet">
+        <div class="hero-bullet-icon">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <div class="hero-bullet-text" data-i18n="t25"><strong>Tiện lợi:</strong> 9 chi nhánh khắp TP.HCM - 1 nút đặt qua app ngay tại nhà</div>
+      </div>
+      <div class="hero-bullet">
+        <div class="hero-bullet-icon">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <div class="hero-bullet-text" data-i18n="t26"><strong>An tâm tuyệt đối:</strong> Theo dõi đồ mọi lúc mọi nơi + Bảo hiểm đồ đạc</div>
+      </div>
+    </div>
+    <div class="hero-ctas" data-i18n="t27">
+      <a href="#services" class="btn-primary">Đặt dịch vụ ngay</a>
+      <a href="#how" class="btn-ghost">Xem quy trình →</a>
+    </div>
+    <div class="hero-stamp">
+      <div class="hero-stamp-label">HERA-MOTHER TAKE CARE</div>
+      <div class="hero-tagline">Less LAUNDRY <span class="w">MORE LOVE</span></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-icon-wrap">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+    </div>
+    <div><div class="trust-num" id="ctr-kh">162,000+</div><div class="trust-label" data-i18n="t28">Khách hàng tin dùng</div></div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon-wrap">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+    </div>
+    <div><div class="trust-num" id="ctr-md">467,000+</div><div class="trust-label" data-i18n="t29">Món đồ được chăm sóc</div></div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon-wrap">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+    </div>
+    <div><div class="trust-num">97.8%</div><div class="trust-label" data-i18n="t30">Khách hàng hài lòng</div></div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon-wrap">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+    </div>
+    <div><div class="trust-num">Since 2017</div><div class="trust-label" data-i18n="t31">Thương hiệu #1 VN</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="services-intro">
+    <div class="section-eyebrow" data-i18n="t32">Dịch vụ của HERAMO</div>
+    <h2 class="section-title" data-i18n="t33">Chăm sóc mọi thứ bạn yêu quý</h2>
+    <p class="section-sub" data-i18n="t34">Đặt ngay tại website, mobile app hoặc tại cửa hàng. Giao nhận tận nơi, theo dõi đơn hàng &amp; món đồ mọi lúc.</p>
+  </div>
+  <div class="services-scroll" data-i18n="t35">
+    <a href="https://heramo.com/giat-hap-giat-kho" class="service-card">
+      <div class="svc-img-wrap"><img class="svc-img" src="assets/giat-hap-giat-kho.png" alt="Giặt hấp giặt khô cao cấp HERAMO" loading="lazy" data-i18n-attr="alt=a1"><span class="svc-tag">Đồ hiệu</span></div>
+      <div class="svc-body"><div class="svc-name">Giặt hấp, giặt khô</div><p class="svc-desc">Giặt hấp, giặt khô đúng chuẩn cho vest, áo dài, đồ hiệu. Dung dịch chuyên dụng, máy móc hiện đại.</p><span class="svc-link">Xem chi tiết →</span></div>
+    </a>
+    <a href="https://heramo.com/giat-say-giat-ui" class="service-card">
+      <div class="svc-img-wrap"><img class="svc-img" src="assets/giat-say.png" alt="Giặt sấy giặt ủi HERAMO" loading="lazy" data-i18n-attr="alt=a2"><span class="svc-tag">24H</span></div>
+      <div class="svc-body"><div class="svc-name">Giặt sấy</div><p class="svc-desc">Giặt sấy, giao nhận tận nơi trong 24H. Giặt máy riêng - gói tháng tiết kiệm.</p><span class="svc-link">Xem chi tiết →</span></div>
+    </a>
+    <a href="https://heramo.com/ve-sinh-giat-giay" class="service-card">
+      <div class="svc-img-wrap"><img class="svc-img" src="assets/ve-sinh-giay.png" alt="Vệ sinh giày HERAMO" loading="lazy" data-i18n-attr="alt=a3"><span class="svc-tag">Spa giày</span></div>
+      <div class="svc-body"><div class="svc-name">Vệ sinh giày</div><p class="svc-desc">Vệ sinh giày, phục hồi chuyên sâu, đánh bóng, khử khuẩn. Chăm sóc giày toàn diện tại TP.HCM.</p><span class="svc-link">Xem chi tiết →</span></div>
+    </a>
+    <a href="https://heramo.com/bag-spa-cleaning-ve-sinh-tui-xach" class="service-card">
+      <div class="svc-img-wrap"><img class="svc-img" src="assets/ve-sinh-tui-xach.png" alt="Spa túi xách HERAMO" loading="lazy" data-i18n-attr="alt=a4"><span class="svc-tag">Túi hiệu</span></div>
+      <div class="svc-body"><div class="svc-name">Vệ sinh, spa túi xách</div><p class="svc-desc">Spa túi xách Hermès, Gucci, LV - vệ sinh, sơn nhuộm, sửa, phục hồi. Kỹ thuật viên chuyên nghiệp.</p><span class="svc-link">Xem chi tiết →</span></div>
+    </a>
+    <a href="https://heramo.com/ve-sinh-giat-sofa-nem-rem-tham" class="service-card">
+      <div class="svc-img-wrap"><img class="svc-img" src="assets/ve-sinh-sofa.png" alt="Vệ sinh sofa nệm HERAMO" loading="lazy" data-i18n-attr="alt=a5"><span class="svc-tag">Gia đình</span></div>
+      <div class="svc-body"><div class="svc-name">Vệ sinh sofa, nệm, rèm, thảm</div><p class="svc-desc">Vệ sinh sofa, nệm, rèm, thảm - diệt khuẩn, khử mùi. Bảo vệ sức khỏe cả gia đình.</p><span class="svc-link">Xem chi tiết →</span></div>
+    </a>
+    <a href="https://heramo.com/ve-sinh-may-lanh" class="service-card">
+      <div class="svc-img-wrap"><img class="svc-img" src="assets/ve-sinh-may-lanh.jpg" alt="Vệ sinh máy lạnh HERAMO" loading="lazy" data-i18n-attr="alt=a6"><span class="svc-tag">Bơm ga</span></div>
+      <div class="svc-body"><div class="svc-name">Vệ sinh máy lạnh</div><p class="svc-desc">Vệ sinh máy lạnh, bơm ga tại nhà. Cải thiện không khí, tiết kiệm điện năng.</p><span class="svc-link">Xem chi tiết →</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how" id="how">
+  <div class="section-eyebrow" data-i18n="t36">Quy trình 4.0</div>
+  <h2 class="section-title" data-i18n="t37">Đơn giản như 1 – 2 – 3 – 4</h2>
+  <p class="section-sub" data-i18n="t38">Đặt lịch online · Shipper đến tận nhà · Theo dõi real-time · Nhận đồ tại cửa.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num-wrap"><div class="step-circle">1</div></div>
+      <div class="step-icon-box">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+      </div>
+      <div class="step-title" data-i18n="t39">Đặt qua app</div>
+      <div class="step-desc" data-i18n="t40">Chọn dịch vụ, chọn giờ - nhanh hơn gọi điện</div>
+    </div>
+    <div class="step">
+      <div class="step-num-wrap"><div class="step-circle">2</div></div>
+      <div class="step-icon-box">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="14" height="13" rx="1"></rect><path d="M15 8h4l3 5v4h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+      </div>
+      <div class="step-title" data-i18n="t41">Chúng tôi đến lấy</div>
+      <div class="step-desc" data-i18n="t42">Shipper đồng phục chuẩn, túi bảo vệ riêng</div>
+    </div>
+    <div class="step">
+      <div class="step-num-wrap"><div class="step-circle">3</div></div>
+      <div class="step-icon-box">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+      </div>
+      <div class="step-title" data-i18n="t43">Theo dõi quy trình</div>
+      <div class="step-desc" data-i18n="t44">App cập nhật từng bước - biết chính xác đơn đang ở công đoạn nào</div>
+    </div>
+    <div class="step">
+      <div class="step-num-wrap"><div class="step-circle">4</div></div>
+      <div class="step-icon-box">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+      </div>
+      <div class="step-title" data-i18n="t45">Nhận về thơm sạch</div>
+      <div class="step-desc" data-i18n="t46">Đúng giờ, đóng gói cẩn thận, bảo đảm</div>
+    </div>
+  </div>
+</section>
+
+<!-- PEACE OF MIND -->
+<section class="section peace" id="peace">
+  <div class="section-eyebrow" data-i18n="t47">Tại sao an tâm</div>
+  <h2 class="section-title" data-i18n="t48">Giao đồ cho HERAMO - an tâm như giao đồ cho mẹ
+</h2>
+  <p class="section-sub" data-i18n="t49">Bốn lý do mỗi đơn hàng đều đáng tin.</p>
+  <div class="peace-grid">
+    <div class="peace-card">
+      <div class="peace-img-wrap"><img class="peace-img" src="assets/ti-mi-chat-lieu.png" alt="Giặt ủi tỉ mỉ đồ hiệu HERAMO" loading="lazy" data-i18n-attr="alt=a7"></div>
+      <div class="peace-body">
+        <div class="peace-title" data-i18n="t50">Tỉ mỉ từng chất liệu &amp; đồ hiệu</div>
+        <p class="peace-desc" data-i18n="t51">Mỗi loại đồ được xử lý theo đúng quy trình riêng. Máy móc hiện đại, dung dịch chuyên dụng nhập khẩu. Đội ngũ chuyên gia lành nghề, tận tâm từng đơn.</p>
+        <div class="luxury-tags" data-i18n="t52">
+          <span class="luxury-tag">Hermès</span><span class="luxury-tag">Gucci</span><span class="luxury-tag">Louis Vuitton</span><span class="luxury-tag">Chanel</span><span class="luxury-tag">Cashmere</span><span class="luxury-tag">Lụa cao cấp</span>
+        </div>
+      </div>
+    </div>
+    <div class="peace-card">
+      <div class="peace-img-wrap"><img class="peace-img" src="assets/tracking-app.png" alt="Theo dõi đơn hàng HERAMO" loading="lazy" data-i18n-attr="alt=a8"></div>
+      <div class="peace-body">
+        <div class="peace-title" data-i18n="t53">Bạn biết đồ đang ở đâu</div>
+        <p class="peace-desc" data-i18n="t54">Theo dõi quy trình từng bước trên app: tiếp nhận → xử lý → kiểm tra → đóng gói → giao trả. Minh bạch 100%.</p>
+        
+      </div>
+    </div>
+    <div class="peace-card">
+      <div class="peace-img-wrap"><img class="peace-img" src="assets/ship-tan-noi.png" alt="Giao nhận tận nhà HERAMO" loading="lazy" data-i18n-attr="alt=a9"></div>
+      <div class="peace-body">
+        <div class="peace-title" data-i18n="t55">Đặt đa kênh - giao nhận tận nơi</div>
+        <div class="peace-detail-list">
+          <div class="peace-detail-item">
+            <div class="peace-detail-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="14" height="13" rx="1"></rect><path d="M15 8h4l3 5v4h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
+            <span data-i18n="t56"><strong>Đội HERAMO Shipper riêng</strong> - đến tận nơi nhận đồ, vận chuyển cẩn thận, giao trả đúng địa chỉ. Không qua tay trung gian.</span>
+          </div>
+          <div class="peace-detail-item">
+            <div class="peace-detail-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><path d="M12 18h.01"></path></svg></div>
+            <span data-i18n="t57"><strong>App HERAMO</strong> - đặt nhanh trong 1 phút</span>
+          </div>
+          <div class="peace-detail-item">
+            <div class="peace-detail-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.92 13 19.79 19.79 0 0 1 1.88 4.38 2 2 0 0 1 3.85 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6.11 6.11l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+            <span><strong>Hotline</strong> 1900 3286</span>
+          </div>
+          <div class="peace-detail-item">
+            <div class="peace-detail-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+            <span><strong>Zalo · Facebook · Instagram</strong></span>
+          </div>
+          <div class="peace-detail-item">
+            <div class="peace-detail-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+            <span data-i18n="t58">Giao nhận <strong>09:00 – 21:00</strong> khắp các quận TP.HCM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="peace-card peace-card-dark">
+      <div class="peace-img-wrap"><img class="peace-img" src="assets/insurance.png" alt="Bảo hiểm đồ đạc HERAMO" loading="lazy" data-i18n-attr="alt=a10"></div>
+      <div class="peace-body" style="background:var(--black)">
+        <div class="peace-title" data-i18n="t59">Gói An Tâm - Bảo vệ tối đa</div>
+        <p class="peace-desc" data-i18n="t60">Đồ có vấn đề trong quá trình xử lý - HERAMO chịu trách nhiệm. Bồi hoàn lên đến 50 triệu, minh bạch. Đặc biệt cho đồ hiệu, túi xách cao cấp.</p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HM BANNER -->
+<div class="hm-banner">
+  <div class="hm-stamp">HERA-MOTHER TAKE CARE</div>
+  <div class="hm-line">Less LAUNDRY <span class="w">MORE LOVE</span></div>
+  <p class="hm-sub" data-i18n="t61">Chúng tôi lo đồ. Bạn lo yêu thương.</p>
+  <div class="hm-cta" data-i18n="t62"><a href="#" class="btn-primary">Đặt dịch vụ ngay - Freeship đơn đầu</a></div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="reviews">
+  <div class="section-eyebrow" data-i18n="t63">Khách hàng nói gì</div>
+  <h2 class="section-title" data-i18n="t64">162,000+ khách hàng đã an tâm</h2>
+  <p class="section-sub" data-i18n="t65">Những người bận rộn - đã tìm lại thời gian cho điều quan trọng hơn.</p>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-quote-mark">"</div>
+      <div class="stars">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      </div>
+      <p class="testi-text" data-i18n="t66">"Cứ gửi HERAMO là yên tâm nhé! Giặt hấp khô rất sạch, chuyên nghiệp và nhân viên lịch sự."</p>
+      <div class="testi-author"><div class="testi-avatar">T</div><div><div class="testi-name" data-i18n="t67">Chị Tố Trâm</div><div class="testi-role" data-i18n="t68">Giảng viên</div></div></div>
+      <span class="testi-service" data-i18n="t69">Giặt hấp đồ hiệu</span>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote-mark">"</div>
+      <div class="stars">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      </div>
+      <p class="testi-text" data-i18n="t70">"Bất kỳ thứ gì anh ấy tặng mình cũng chỉ giao HERAMO vệ sinh. Giày, đồ đôi, gấu bông - rất an tâm."</p>
+      <div class="testi-author"><div class="testi-avatar">X</div><div><div class="testi-name" data-i18n="t71">Chị Hà Xuyên</div><div class="testi-role" data-i18n="t72">Chủ shop Online</div></div></div>
+      <span class="testi-service" data-i18n="t73">Nhiều dịch vụ</span>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote-mark">"</div>
+      <div class="stars">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      </div>
+      <p class="testi-text" data-i18n="t74">"Công ty tháng nào cũng đặt HERAMO cho sofa và thảm phòng họp. Hiệu quả miễn bàn, tiện lợi và an tâm."</p>
+      <div class="testi-author"><div class="testi-avatar">H</div><div><div class="testi-name" data-i18n="t75">Chị Nguyễn Hồng</div><div class="testi-role" data-i18n="t76">Quản lý</div></div></div>
+      <span class="testi-service" data-i18n="t77">Vệ sinh sofa, thảm</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section class="section press" id="press">
+  <div class="section-eyebrow" data-i18n="t78">Truyền thông nói gì</div>
+  <h2 class="section-title" data-i18n="t79">Được báo chí tin tưởng</h2>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="press-track">
+      <div class="marquee-item"><span class="marquee-text" style="color:#e2000f">VnExpress</span></div>
+      <div class="marquee-item" data-i18n="t80"><span class="marquee-text" style="color:#003087">Tuổi Trẻ</span></div>
+      <div class="marquee-item" data-i18n="t81"><span class="marquee-text" style="color:#c8000a">Thanh Niên</span></div>
+      <div class="marquee-item"><span class="marquee-text" style="color:#e37418">CafeBiz</span></div>
+      <div class="marquee-item"><span class="marquee-text" style="color:#005baa">VTV</span></div>
+      <div class="marquee-item"><span class="marquee-text" style="color:#0060a9">Zing News</span></div>
+      <div class="marquee-item" data-i18n="t82"><span class="marquee-text" style="color:#006633">Dân Trí</span></div>
+      <div class="marquee-item" data-i18n="t83"><span class="marquee-text" style="color:#333">Người Đô Thị</span></div>
+      <div class="marquee-item"><span class="marquee-text" style="color:#000">Forbes <span style="color:#c8a800">VN</span></span></div>
+      <div class="marquee-item"><span class="marquee-text" style="color:#e2000f">VnExpress</span></div>
+      <div class="marquee-item" data-i18n="t84"><span class="marquee-text" style="color:#003087">Tuổi Trẻ</span></div>
+      <div class="marquee-item" data-i18n="t85"><span class="marquee-text" style="color:#c8000a">Thanh Niên</span></div>
+      <div class="marquee-item"><span class="marquee-text" style="color:#e37418">CafeBiz</span></div>
+      <div class="marquee-item"><span class="marquee-text" style="color:#005baa">VTV</span></div>
+      <div class="marquee-item"><span class="marquee-text" style="color:#0060a9">Zing News</span></div>
+      <div class="marquee-item" data-i18n="t86"><span class="marquee-text" style="color:#006633">Dân Trí</span></div>
+      <div class="marquee-item" data-i18n="t87"><span class="marquee-text" style="color:#333">Người Đô Thị</span></div>
+      <div class="marquee-item"><span class="marquee-text" style="color:#000">Forbes <span style="color:#c8a800">VN</span></span></div>
+    </div>
+  </div>
+  <div class="press-media-grid">
+    <div class="press-card">
+      <div class="press-video-wrap" id="yt1" onclick="loadYT('yt1','hz7ZNd_wEAY','2')" style="cursor:pointer">
+        <img src="https://img.youtube.com/vi/hz7ZNd_wEAY/hqdefault.jpg" alt="HERAMO VTV 2024">
+        <div class="press-play-overlay">
+          <div class="press-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+          <div class="press-play-label" data-i18n="t88">Nhấn để xem</div>
+        </div>
+      </div>
+      <div class="press-body">
+        <div class="press-source"><img src="assets/logo-vtv.png" alt="VTV" style="height:24px;width:auto;display:block"></div>
+        <div class="press-title" data-i18n="t89">HERAMO - Ứng dụng giặt ủi vệ sinh 4.0 dẫn đầu tại TP.HCM</div>
+        <a href="https://www.youtube.com/watch?v=hz7ZNd_wEAY&amp;t=2s" target="_blank" class="press-link" data-i18n="t90">Xem trên YouTube →</a>
+      </div>
+    </div>
+    <div class="press-card">
+      <div class="press-video-wrap" id="yt2" onclick="loadYT('yt2','-jLGktu6Mlc','1')" style="cursor:pointer">
+        <img src="https://img.youtube.com/vi/-jLGktu6Mlc/hqdefault.jpg" alt="HERAMO Truyền hình Thanh Niên 2023" data-i18n-attr="alt=a11">
+        <div class="press-play-overlay">
+          <div class="press-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+          <div class="press-play-label" data-i18n="t91">Nhấn để xem</div>
+        </div>
+      </div>
+      <div class="press-body">
+        <div class="press-source"><img src="assets/logo-thanhnien.png" alt="Truyền hình Thanh Niên" style="height:24px;width:auto;display:block" data-i18n-attr="alt=a12"></div>
+        <div class="press-title" data-i18n="t92">HERAMO trên Truyền hình Thanh Niên Thành phố Hồ Chí Minh</div>
+        <a href="https://www.youtube.com/watch?v=-jLGktu6Mlc&amp;t=1s" target="_blank" class="press-link" data-i18n="t93">Xem trên YouTube →</a>
+      </div>
+    </div>
+    <div class="press-card">
+      <div class="press-article-img-wrap"><img src="assets/top3-startup-wheel.jpg" alt="HERAMO Top 3 Startup Wheel 2021" class="press-article-img" loading="lazy"></div>
+      <div class="press-body">
+        <div class="press-source"><img src="assets/logo-cafebiz-full.png" alt="CafeBiz" style="height:24px;width:auto;display:block"></div>
+        <div class="press-title" data-i18n="t94">HERAMO - Ứng dụng giặt ủi, vệ sinh 4.0 đạt Top 3 Startup Wheel 2021</div>
+        <a href="https://cafebiz.vn/heramo-ung-dung-giat-ui-ve-sinh-40-dat-top-3-startup-wheel-2021-20211115122448562.chn" target="_blank" class="press-link" data-i18n="t95">Đọc bài viết →</a>
+      </div>
+    </div>
+  </div>
+  <div class="press-quotes">
+    <div class="press-quote">
+      <div class="press-source"><img src="assets/logo-vnexpress.png" alt="VnExpress" style="height:24px;width:auto;display:block"></div>
+      <p class="press-quote-text" data-i18n="t96">"HERAMO đã thay đổi cách người dùng tại TP.HCM tiếp cận dịch vụ giặt ủi - từ <strong>quy trình thủ công sang trải nghiệm số hoàn toàn.</strong>"</p>
+      <a href="https://vnexpress.net/heramo-nen-tang-so-cho-nganh-giat-ui-4558351.html" target="_blank" class="press-link" data-i18n="t97">Đọc bài viết →</a>
+    </div>
+
+    <div class="press-quote">
+      <div class="press-source"><img src="assets/logo-nld.jpg" alt="Người Lao Động" style="height:24px;width:auto;display:block" data-i18n-attr="alt=a13"></div>
+      <p class="press-quote-text" data-i18n="t98">"Mô hình 4.0 kết hợp chăm sóc tỉ mỉ của HERAMO <strong>đang giải quyết bài toán thời gian</strong> cho các gia đình bận rộn đô thị."</p>
+      <a href="https://tuoitre.vn/nld/khoi-nghiep/chuyen-nghiep-hoa-nganh-giat-ui-20230813202803661.htm" target="_blank" class="press-link" data-i18n="t99">Đọc bài viết →</a>
+    </div>
+    <div class="press-quote">
+      <div class="press-source"><img src="assets/logo-nguoidothi.jpg" alt="Người Đô Thị" style="height:24px;width:auto;display:block"></div>
+      <p class="press-quote-text" style="font-size:15px;line-height:1.6" data-i18n="t100">Phúc Heramo - người giặt giày số 1 Việt Nam</p>
+      <a href="https://nguoidothi.net.vn/phuc-heramo-nguoi-giat-giay-so-1-viet-nam-41218.html" target="_blank" class="press-link" data-i18n="t101">Đọc bài viết →</a>
+    </div>
+    <div class="press-quote press-quote-extra" style="display:none">
+      <div class="press-source"><img src="assets/logo-cafef.png" alt="CafeF" style="height:24px;width:auto;display:block"></div>
+      <p class="press-quote-text" style="font-size:15px;line-height:1.6" data-i18n="t102">Nhượng quyền thương hiệu ngành "giặt ủi" - hướng đi mới cho nhà đầu tư</p>
+      <a href="https://cafef.vn/nhuong-quyen-thuong-hieu-nganh-giat-ui-huong-di-moi-cho-nha-dau-tu-20230111222129826.chn" target="_blank" class="press-link" data-i18n="t103">Đọc bài viết →</a>
+    </div>
+    <div class="press-quote press-quote-extra" style="display:none">
+      <div class="press-source"><img src="assets/logo-kenh14.png" alt="Kênh14" style="height:24px;width:auto;display:block"></div>
+      <p class="press-quote-text" style="font-size:15px;line-height:1.6" data-i18n="t104">Làm sớm 3 việc này để có một cái Tết bình an, điều cuối cùng còn giúp bạn tiết kiệm tiền</p>
+      <a href="https://kenh14.vn/lam-som-3-viec-nay-de-co-mot-cai-tet-binh-an-dieu-cuoi-cung-con-giup-ban-tiet-kiem-tien-20230111092202601.chn" target="_blank" class="press-link" data-i18n="t105">Đọc bài viết →</a>
+    </div>
+    <div class="press-quote press-quote-extra" style="display:none">
+      <div class="press-source"><img src="assets/logo-dantri.png" alt="Dân Trí" style="height:24px;width:auto;display:block"></div>
+      <p class="press-quote-text" style="font-size:15px;line-height:1.6" data-i18n="t106">Đón Tết kiểu online của người trẻ</p>
+      <a href="https://dantri.com.vn/kinh-doanh/don-tet-kieu-online-cua-nguoi-tre-20220121070609106.htm" target="_blank" class="press-link" data-i18n="t107">Đọc bài viết →</a>
+    </div>
+    <div class="press-quote press-quote-extra" style="display:none">
+      <div class="press-source"><img src="assets/logo-cafef.png" alt="CafeF" style="height:24px;width:auto;display:block"></div>
+      <p class="press-quote-text" style="font-size:15px;line-height:1.6" data-i18n="t108">HERAMO - Startup tham vọng cách mạng hóa trải nghiệm giặt ủi, vệ sinh</p>
+      <a href="https://cafef.vn/heramo-startup-tham-vong-cach-mang-hoa-trai-nghiem-giat-ui-ve-sinh-20211119172935415.chn" target="_blank" class="press-link" data-i18n="t109">Đọc bài viết →</a>
+    </div>
+    <div class="press-quote press-quote-extra" style="display:none">
+      <div class="press-source"><img src="assets/logo-kenh14.png" alt="Kênh14" style="height:24px;width:auto;display:block"></div>
+      <p class="press-quote-text" style="font-size:15px;line-height:1.6" data-i18n="t110">Chưa hết hot, ngoài mang tiền về cho mẹ thì con mang gì?</p>
+      <a href="https://kenh14.vn/chua-het-hot-ngoai-mang-tien-ve-cho-me-thi-con-mang-gi-20220119002036942.chn" target="_blank" class="press-link" data-i18n="t111">Đọc bài viết →</a>
+    </div>
+    <div class="press-quote press-quote-extra" style="display:none">
+      <div class="press-source"><img src="assets/logo-afamily.png" alt="Afamily" style="height:24px;width:auto;display:block"></div>
+      <p class="press-quote-text" style="font-size:15px;line-height:1.6" data-i18n="t112">Làm ngay 4 đầu việc này nếu bạn mãi bận rộn chưa kịp chuẩn bị Tết</p>
+      <a href="https://afamily.vn/lam-ngay-4-dau-viec-nay-neu-ban-mai-ban-ron-chua-kip-chuan-bi-tet-20220120161048169.chn" target="_blank" class="press-link" data-i18n="t113">Đọc bài viết →</a>
+    </div>
+    <div class="press-quote press-quote-extra" style="display:none">
+      <div class="press-source"><img src="assets/logo-trendsvietnam.png" alt="Trends Vietnam" style="height:24px;width:auto;display:block"></div>
+      <p class="press-quote-text" style="font-size:15px;line-height:1.6" data-i18n="t114">HERAMO - Ứng dụng giải phóng mọi người khỏi gánh nặng giặt ủi và công việc gia đình</p>
+      <a href="https://trendsvietnam.vn/heramo-ung-dung-giai-phong-moi-nguoi-khoi-ganh-nang-giat-ui-va-cong-viec-gia-dinh-3113" target="_blank" class="press-link" data-i18n="t115">Đọc bài viết →</a>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:32px" data-i18n="t116">
+    <a href="javascript:void(0)" class="btn-outline" onclick="showMoreArticles(this)">Đọc thêm bài viết →</a>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section partners" id="partners">
+  <div class="section-eyebrow" data-i18n="t117">Đối tác B2B</div>
+  <h2 class="section-title" data-i18n="t118">Được các thương hiệu lớn tin chọn</h2>
+  <p class="section-sub" style="margin-bottom:28px" data-i18n="t119">Từ chuỗi fitness, khách sạn đến văn phòng &amp; spa - HERAMO là đối tác tin cậy cho doanh nghiệp tại TP.HCM.</p>
+  <div class="marquee-wrap" style="margin-bottom:16px">
+    <div class="marquee-track">
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-vinhomes.jpg" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">Vinhomes Central Park</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-parkhyatt.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">Park Hyatt Saigon</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-manor.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">The Manor Central Park</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-estella.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">The Estella</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-himlam.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">Him Lam Riverside</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-masteri.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name" data-i18n="t120">Masteri Thảo Điền</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-liberty.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">Liberty Central Saigon</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-intercontinental.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">InterContinental Asiana</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-california.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">California Fitness &amp; Yoga</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-grab.jpg" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">Grab Vietnam</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-vinhomes.jpg" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">Vinhomes Central Park</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-parkhyatt.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">Park Hyatt Saigon</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-manor.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">The Manor Central Park</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-estella.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">The Estella</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-himlam.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">Him Lam Riverside</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-masteri.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name" data-i18n="t121">Masteri Thảo Điền</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-liberty.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">Liberty Central Saigon</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-intercontinental.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">InterContinental Asiana</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-california.png" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">California Fitness &amp; Yoga</span></div>
+      <div class="marquee-item"><div class="partner-logo-mini" style=""><img src="assets/logo-grab.jpg" style="width:100%;height:100%;object-fit:contain"></div><span class="partner-name">Grab Vietnam</span></div>
+    </div>
+  </div>
+  <p class="partners-note" data-i18n="t122">Liên hệ hợp tác B2B: <strong>0868 050 586</strong> · business@heramo.com</p>
+</section>
+
+<!-- APP DOWNLOAD -->
+<section class="app" id="app">
+  <div class="app-container">
+
+    <!-- LEFT: Feature list -->
+    <div class="app-left">
+      <div class="section-eyebrow" data-i18n="t123">Tải ứng dụng</div>
+      <h2 class="section-title" data-i18n="t124">Đặt dịch vụ ngay<br>trên app HERAMO</h2>
+      <p class="section-sub" data-i18n="t125">Theo dõi đơn hàng, hình ảnh món đồ mọi lúc mọi nơi.</p>
+
+<!-- Mobile top phone preview -->
+      <div class="app-phone-top">
+        <div class="app-phone">
+          <button class="phone-nav-btn phone-nav-prev" onclick="prevFeat()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+          </button>
+          <button class="phone-nav-btn phone-nav-next" onclick="nextFeat()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          <div class="phone-outer-frame">
+          <div class="phone-bezel">
+            <div class="phone-dynamic-island"></div>
+            <div class="phone-status-bar">
+              <span class="phone-status-time">9:41</span>
+              <div class="phone-status-icons">
+                <svg width="19" height="12" viewBox="0 0 19 12"><rect x="0" y="7.5" width="3.2" height="4.5" rx="0.7" fill="white"></rect><rect x="4.8" y="5" width="3.2" height="7" rx="0.7" fill="white"></rect><rect x="9.6" y="2.5" width="3.2" height="9.5" rx="0.7" fill="white"></rect><rect x="14.4" y="0" width="3.2" height="12" rx="0.7" fill="white"></rect></svg>
+                <svg width="16" height="12" viewBox="0 0 17 12"><path d="M8.5 3.2C10.8 3.2 12.9 4.1 14.4 5.6L15.5 4.5C13.7 2.7 11.2 1.5 8.5 1.5C5.8 1.5 3.3 2.7 1.5 4.5L2.6 5.6C4.1 4.1 6.2 3.2 8.5 3.2Z" fill="white"></path><path d="M8.5 6.8C9.9 6.8 11.1 7.3 12 8.2L13.1 7.1C11.8 5.9 10.2 5.1 8.5 5.1C6.8 5.1 5.2 5.9 3.9 7.1L5 8.2C5.9 7.3 7.1 6.8 8.5 6.8Z" fill="white"></path><circle cx="8.5" cy="10.5" r="1.5" fill="white"></circle></svg>
+                <svg width="27" height="13" viewBox="0 0 27 13"><rect x="0.5" y="0.5" width="23" height="12" rx="3.5" stroke="white" stroke-opacity="0.35" fill="none"></rect><rect x="2" y="2" width="20" height="9" rx="2" fill="white"></rect><path d="M25 4.5V8.5C25.8 8.2 26.5 7.2 26.5 6.5C26.5 5.8 25.8 4.8 25 4.5Z" fill="white" fill-opacity="0.4"></path></svg>
+              </div>
+            </div>
+            <div class="phone-home-bar"></div>
+            <div class="phone-screen-wrap">
+              <div class="phone-screen-item active">
+                <img src="assets/app-screen-1.png" style="width:100%;height:100%;object-fit:contain;object-position:top;display:block;background:#f5f5f5;">
+              </div>
+              <div class="phone-screen-item">
+                <img src="assets/app-screen-2.jpg" style="width:100%;height:100%;object-fit:contain;object-position:top;display:block;background:#f5f5f5;">
+              </div>
+              <div class="phone-screen-item">
+                <img src="assets/app-screen-3.jpg" style="width:100%;height:100%;object-fit:contain;object-position:top;display:block;background:#f5f5f5;">
+              </div>
+              <div class="phone-screen-item">
+                <img src="assets/app-screen-4.jpg" style="width:100%;height:100%;object-fit:contain;object-position:top;display:block;background:#f5f5f5;">
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+      </div>
+
+<div class="app-feat-list" id="appFeatList">
+        <!-- Feature 1 -->
+        <div class="app-feat-item active" data-idx="0" onclick="goToFeat(0,true)">
+          <div class="app-feat-row">
+            <div class="app-feat-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><path d="M12 18h.01"></path></svg></div>
+            <div><div class="app-feat-num" data-i18n="t126">TIỆN ÍCH 1</div><div class="app-feat-name" data-i18n="t127">Đặt tất cả dịch vụ nhanh chóng</div><div class="app-feat-desc" data-i18n="t128">Chọn dịch vụ, đặt lịch giao nhận, xem các ưu đãi hiện có - tất cả trong 1 phút ngay trên điện thoại.</div></div>
+          </div>
+          <div class="app-feat-progress"><div class="app-feat-progress-bar" id="pb0"></div></div>
+          <div class="app-feat-cta" onclick="toggleMobilePhone(this,0)" data-i18n="t129">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><path d="M12 18h.01"></path></svg>
+            Xem trên ứng dụng
+          </div>
+          <div class="app-feat-phone-preview">
+            <div class="app-feat-phone-preview-inner">
+              <div class="app-feat-mini-phone"><div class="app-feat-mini-bezel"><img src="assets/app-screen-1.png" alt=""></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="app-feat-item" data-idx="1" onclick="goToFeat(1,true)">
+          <div class="app-feat-row">
+            <div class="app-feat-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+            <div><div class="app-feat-num" data-i18n="t130">TIỆN ÍCH 2</div><div class="app-feat-name" data-i18n="t131">Theo dõi đơn hàng &amp; hình ảnh thực tế</div><div class="app-feat-desc" data-i18n="t132">Biết chính xác đồ đang ở bước nào - tiếp nhận, xử lý, đóng gói hay giao trả. Minh bạch 100%.</div></div>
+          </div>
+          <div class="app-feat-progress"><div class="app-feat-progress-bar" id="pb1"></div></div>
+          <div class="app-feat-cta" onclick="toggleMobilePhone(this,1)" data-i18n="t133">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><path d="M12 18h.01"></path></svg>
+            Xem trên ứng dụng
+          </div>
+          <div class="app-feat-phone-preview">
+            <div class="app-feat-phone-preview-inner">
+              <div class="app-feat-mini-phone"><div class="app-feat-mini-bezel"><img src="assets/app-screen-2.jpg" alt=""></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="app-feat-item" data-idx="2" onclick="goToFeat(2,true)">
+          <div class="app-feat-row">
+            <div class="app-feat-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="14" height="13" rx="1"></rect><path d="M15 8h4l3 5v4h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
+            <div><div class="app-feat-num" data-i18n="t134">TIỆN ÍCH 3</div><div class="app-feat-name" data-i18n="t135">Freeship 2 chiều tối đa 50K</div><div class="app-feat-desc" data-i18n="t136">Khách mới nhận ngay freeship 2 chiều tối đa 50K cho đơn đầu tiên khi đặt qua app HERAMO.</div></div>
+          </div>
+          <div class="app-feat-progress"><div class="app-feat-progress-bar" id="pb2"></div></div>
+          <div class="app-feat-cta" onclick="toggleMobilePhone(this,2)" data-i18n="t137">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><path d="M12 18h.01"></path></svg>
+            Xem trên ứng dụng
+          </div>
+          <div class="app-feat-phone-preview">
+            <div class="app-feat-phone-preview-inner">
+              <div class="app-feat-mini-phone"><div class="app-feat-mini-bezel"><img src="assets/app-screen-3.jpg" alt=""></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="app-feat-item" data-idx="3" onclick="goToFeat(3,true)">
+          <div class="app-feat-row">
+            <div class="app-feat-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><path d="M12 22V7"></path><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg></div>
+            <div><div class="app-feat-num" data-i18n="t138">TIỆN ÍCH 4</div><div class="app-feat-name" data-i18n="t139">Gói combo dài hạn tiết kiệm hơn</div><div class="app-feat-desc" data-i18n="t140">Đăng ký gói combo dài hạn với số lượng phù hợp, thời hạn lên tới 1 năm - tiết kiệm hơn, ưu tiên xếp lịch.</div></div>
+          </div>
+          <div class="app-feat-progress"><div class="app-feat-progress-bar" id="pb3"></div></div>
+          <div class="app-feat-cta" onclick="toggleMobilePhone(this,3)" data-i18n="t141">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><path d="M12 18h.01"></path></svg>
+            Xem trên ứng dụng
+          </div>
+          <div class="app-feat-phone-preview">
+            <div class="app-feat-phone-preview-inner">
+              <div class="app-feat-mini-phone"><div class="app-feat-mini-bezel"><img src="assets/app-screen-4.jpg" alt=""></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-controls">
+        <button class="app-pause-btn" id="appPauseBtn" onclick="toggleAppPause()" data-i18n="t142">⏸ Tạm dừng</button>
+        <div class="app-dots" id="appDots">
+          <button class="app-dot active" onclick="goToFeat(0,true)"></button>
+          <button class="app-dot" onclick="goToFeat(1,true)"></button>
+          <button class="app-dot" onclick="goToFeat(2,true)"></button>
+          <button class="app-dot" onclick="goToFeat(3,true)"></button>
+        </div>
+      </div>
+
+      <div class="app-badges">
+        <a href="#" class="app-badge"><img src="assets/apple-button.svg" height="46" alt="App Store"></a>
+        <a href="#" class="app-badge"><img src="assets/ch-store-button.svg" height="46" alt="Google Play"></a>
+      </div>
+      <div class="app-badges" style="display:none" data-i18n="t143">
+        <a href="#" class="app-badge"><svg width="140" height="46" viewBox="0 0 140 46" fill="none"><rect width="140" height="46" rx="8" fill="#000"></rect><rect x=".5" y=".5" width="139" height="45" rx="7.5" stroke="white" stroke-opacity=".3"></rect><g transform="translate(12,11)"><path d="M10 3.8c.5-.6.9-1.5.8-2.4-.8.1-1.8.5-2.3 1.2-.5.5-1 1.5-.8 2.3.9.1 1.8-.4 2.3-1.1z" fill="white"></path><path d="M11 5.3c-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.6-2.5-.6-1.3 0-2.5.7-3.1 1.9-1.3 2.3-.4 5.8 1 7.7.6.9 1.4 1.9 2.4 1.9 1 0 1.3-.6 2.4-.6 1.1 0 1.5.6 2.5.6 1.1 0 1.7-1 2.4-1.9.4-.5.6-1.1.8-1.6-2.2-.8-2.6-4-.4-5.3-.4-.7-1.2-1.2-2.1-1.8l-.4-.1z" fill="white"></path></g><text x="38" y="17" font-family="Montserrat,sans-serif" font-size="9" fill="white" opacity=".75">Lấy mã ngay trên</text><text x="38" y="34" font-family="Montserrat,sans-serif" font-size="16" fill="white" font-weight="700">App Store</text></svg></a>
+        <a href="#" class="app-badge"><svg width="154" height="46" viewBox="0 0 154 46" fill="none"><rect width="154" height="46" rx="8" fill="#000"></rect><rect x=".5" y=".5" width="153" height="45" rx="7.5" stroke="white" stroke-opacity=".3"></rect><g transform="translate(12,13)"><path d="M0 1.2L9 8 0 14.8V1.2z" fill="#EA4335"></path><path d="M0 1.2L9 8l4-3.4L3.5 0C2-.4.8.2 0 1.2z" fill="#4285F4"></path><path d="M0 14.8L9 8l4 3.4-5.5 3.1C2 16.4.8 15.8 0 14.8z" fill="#34A853"></path><path d="M9 8l4-3.4 2.5 1.4L13 8l-4 0z" fill="#FBBC04"></path></g><text x="38" y="17" font-family="Montserrat,sans-serif" font-size="9" fill="white" opacity=".75">Lấy mã ngay trên</text><text x="38" y="34" font-family="Montserrat,sans-serif" font-size="16" fill="white" font-weight="700">Google Play</text></svg></a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Phone mockup -->
+    <div class="app-phone-col">
+      <div class="app-phone-glow"></div>
+      <div class="app-phone">
+        <button class="phone-nav-btn phone-nav-prev" onclick="prevFeat()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+        </button>
+        <button class="phone-nav-btn phone-nav-next" onclick="nextFeat()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+        </button>
+        <div class="phone-outer-frame">
+        <div class="phone-bezel">
+          <!-- Dynamic Island -->
+          <div class="phone-dynamic-island"></div>
+          <!-- Status bar -->
+          <div class="phone-status-bar">
+            <span class="phone-status-time">9:41</span>
+            <div class="phone-status-icons">
+              <svg width="19" height="12" viewBox="0 0 19 12"><rect x="0" y="7.5" width="3.2" height="4.5" rx="0.7" fill="white"></rect><rect x="4.8" y="5" width="3.2" height="7" rx="0.7" fill="white"></rect><rect x="9.6" y="2.5" width="3.2" height="9.5" rx="0.7" fill="white"></rect><rect x="14.4" y="0" width="3.2" height="12" rx="0.7" fill="white"></rect></svg>
+              <svg width="16" height="12" viewBox="0 0 17 12"><path d="M8.5 3.2C10.8 3.2 12.9 4.1 14.4 5.6L15.5 4.5C13.7 2.7 11.2 1.5 8.5 1.5C5.8 1.5 3.3 2.7 1.5 4.5L2.6 5.6C4.1 4.1 6.2 3.2 8.5 3.2Z" fill="white"></path><path d="M8.5 6.8C9.9 6.8 11.1 7.3 12 8.2L13.1 7.1C11.8 5.9 10.2 5.1 8.5 5.1C6.8 5.1 5.2 5.9 3.9 7.1L5 8.2C5.9 7.3 7.1 6.8 8.5 6.8Z" fill="white"></path><circle cx="8.5" cy="10.5" r="1.5" fill="white"></circle></svg>
+              <svg width="27" height="13" viewBox="0 0 27 13"><rect x="0.5" y="0.5" width="23" height="12" rx="3.5" stroke="white" stroke-opacity="0.35" fill="none"></rect><rect x="2" y="2" width="20" height="9" rx="2" fill="white"></rect><path d="M25 4.5V8.5C25.8 8.2 26.5 7.2 26.5 6.5C26.5 5.8 25.8 4.8 25 4.5Z" fill="white" fill-opacity="0.4"></path></svg>
+            </div>
+          </div>
+          <!-- Home indicator -->
+          <div class="phone-home-bar"></div>
+          <!-- Screens -->
+          <div class="phone-screen-wrap">
+
+            <!-- Screen 1: Đặt dịch vụ -->
+            <div class="phone-screen-item active" id="ps0">
+              <img src="assets/app-screen-1.png" style="width:100%;height:100%;object-fit:contain;object-position:top;display:block;background:#f5f5f5;">
+            </div>
+
+            <!-- Screen 2: Theo dõi đơn -->
+            <div class="phone-screen-item" id="ps1">
+              <img src="assets/app-screen-2.jpg" style="width:100%;height:100%;object-fit:contain;object-position:top;display:block;background:#f5f5f5;">
+            </div>
+
+            <!-- Screen 3: Freeship -->
+            <div class="phone-screen-item" id="ps2">
+              <img src="assets/app-screen-3.jpg" style="width:100%;height:100%;object-fit:contain;object-position:top;display:block;background:#f5f5f5;">
+            </div>
+
+            <!-- Screen 4: Subscription -->
+            <div class="phone-screen-item" id="ps3">
+              <img src="assets/app-screen-4.jpg" style="width:100%;height:100%;object-fit:contain;object-position:top;display:block;background:#f5f5f5;">
+            </div>
+
+          </div><!-- /phone-screen-wrap -->
+        </div><!-- /phone-bezel -->
+        </div><!-- /phone-outer-frame -->
+        </div><!-- /app-phone -->
+    </div><!-- /app-phone-col -->
+
+  </div><!-- /app-container -->
+</section>
+
+<!-- STORES -->
+<section class="section stores" id="stores">
+  <div class="section-eyebrow" data-i18n="t144">Hệ thống cửa hàng</div>
+  <h2 class="section-title" data-i18n="t145">9 cửa hàng khắp TP.HCM</h2>
+  <p class="section-sub" data-i18n="t146">Đến trực tiếp hoặc đặt app giao nhận tận nhà.</p>
+  <div class="stores-grid" data-i18n="t147">
+    <a class="store-card" href="https://maps.app.goo.gl/TRGimoUUTbSMZT2T7" target="_blank" rel="noopener noreferrer"><div class="store-img-wrap"><img src="assets/store-s1.jpg" alt="HERAMO CN1" loading="lazy"></div><div class="store-info"><div class="store-num">CN1</div><div><div class="store-name">01 Trường Sơn, Tân Bình</div><div class="store-addr">Gần sân bay Tân Sơn Nhất</div><span class="store-link">Xem bản đồ →</span></div></div></a>
+    <a class="store-card" href="https://maps.app.goo.gl/iw8ZJb2jvtTqVAQJ9" target="_blank" rel="noopener noreferrer"><div class="store-img-wrap"><img src="assets/store-s2.jpg" alt="HERAMO CN2" loading="lazy"></div><div class="store-info"><div class="store-num">CN2</div><div><div class="store-name">18A/71 Nguyễn Thị Minh Khai, Q.1</div><div class="store-addr">Trung tâm thành phố</div><span class="store-link">Xem bản đồ →</span></div></div></a>
+    <a class="store-card" href="https://maps.app.goo.gl/LjyT8Xor5EFZ4J5B8" target="_blank" rel="noopener noreferrer"><div class="store-img-wrap"><img src="assets/store-s3.jpg" alt="HERAMO CN3" loading="lazy"></div><div class="store-info"><div class="store-num">CN3</div><div><div class="store-name">13C Hồ Hảo Hớn, Q.1</div><div class="store-addr">Trung tâm thành phố</div><span class="store-link">Xem bản đồ →</span></div></div></a>
+    <a class="store-card" href="https://maps.app.goo.gl/DPpea1vvFL9ouxN46" target="_blank" rel="noopener noreferrer"><div class="store-img-wrap"><img src="assets/store-s4.jpg" alt="HERAMO CN4" loading="lazy"></div><div class="store-info"><div class="store-num">CN4</div><div><div class="store-name">196 Quang Trung, Gò Vấp</div><div class="store-addr">Khu vực Gò Vấp</div><span class="store-link">Xem bản đồ →</span></div></div></a>
+    <a class="store-card" href="https://maps.app.goo.gl/NY3dybsis26VFW3E9" target="_blank" rel="noopener noreferrer"><div class="store-img-wrap"><img src="assets/store-cn5.jpg" alt="HERAMO CN5" loading="lazy"></div><div class="store-info"><div class="store-num">CN5</div><div><div class="store-name">179B Đường 3/2, Q.10</div><div class="store-addr">Quận 10</div><span class="store-link">Xem bản đồ →</span></div></div></a>
+    <a class="store-card" href="https://maps.app.goo.gl/1WHH6mKEJfEEpHq27" target="_blank" rel="noopener noreferrer"><div class="store-img-wrap"><img src="assets/store-cn6.jpg" alt="HERAMO CN6" loading="lazy"></div><div class="store-info"><div class="store-num">CN6</div><div><div class="store-name">15A Đường Số 2, Thủ Đức</div><div class="store-addr">TP. Thủ Đức</div><span class="store-link">Xem bản đồ →</span></div></div></a>
+    <a class="store-card" href="https://maps.app.goo.gl/haubgAgX76x4jKNB9" target="_blank" rel="noopener noreferrer"><div class="store-img-wrap"><img src="assets/store-cn7.jpg" alt="HERAMO CN7" loading="lazy"></div><div class="store-info"><div class="store-num">CN7</div><div><div class="store-name">398 Hoàng Diệu, P.2, Q.4</div><div class="store-addr">Quận 4</div><span class="store-link">Xem bản đồ →</span></div></div></a>
+    <a class="store-card" href="https://maps.app.goo.gl/EWcGUy93YAFxGArL9" target="_blank" rel="noopener noreferrer"><div class="store-img-wrap"><img src="assets/store-cn8.jpg" alt="HERAMO CN8" loading="lazy"></div><div class="store-info"><div class="store-num">CN8</div><div><div class="store-name">163 Đường Số 1, Q.7</div><div class="store-addr">Phú Mỹ Hưng, Quận 7</div><span class="store-link">Xem bản đồ →</span></div></div></a>
+    <a class="store-card" href="https://www.google.com/maps/search/?api=1&amp;query=23+V%C3%B5+Tr%C6%B0%E1%BB%9Dng+To%E1%BA%A3n+Ph%C6%B0%E1%BB%9Dng+An+Kh%C3%A1nh+Qu%E1%BA%ADn+2" target="_blank" rel="noopener noreferrer"><div class="store-img-wrap"><img src="assets/store-cn9.jpg" alt="HERAMO CN9" loading="lazy"></div><div class="store-info"><div class="store-num">CN9</div><div><div class="store-name">23 Võ Trường Toản, P. An Khánh, Q.2</div><div class="store-addr">Quận 2</div><span class="store-link">Xem bản đồ →</span></div></div></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo"><img src="assets/heramo-logo.png" alt="HERAMO"></div>
+      <p class="footer-promise" data-i18n="t148">HERAMO - Dịch vụ giặt ủi vệ sinh cao cấp</p>
+      <p class="footer-promise" data-i18n="t149">HERAMO bắt đầu hành trình từ năm 2017 với khát khao giúp hàng triệu người đặt các dịch vụ <span style="color:var(--gold)">giặt ủi, giặt hấp, vệ sinh giày, vệ sinh nhà cửa, vệ sinh máy lạnh</span> tiện lợi - để có thêm thời gian tận hưởng cuộc sống.</p>
+      <p class="footer-promise" style="margin-top:8px" data-i18n="t150">Sau hơn 9 năm tiên phong ứng dụng công nghệ 4.0, HERAMO tự hào là thương hiệu dẫn đầu tại TP.HCM với <span style="color:var(--gold)">162.000+ khách hàng tin dùng.</span></p>
+      <div class="footer-tagline">Less LAUNDRY MORE LOVE</div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="t151">Công ty</div>
+      <ul class="footer-links">
+        <li data-i18n="t152"><a href="#">Về chúng tôi</a></li>
+        <li data-i18n="t153"><a href="#">Tuyển dụng</a></li>
+        <li data-i18n="t154"><a href="#">Trở thành đối tác</a></li>
+        <li><a href="#">Blog</a></li>
+        <li data-i18n="t155"><a href="#">Điều khoản sử dụng</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="t156">Dịch vụ</div>
+      <ul class="footer-links">
+        <li data-i18n="t157"><a href="#">Giặt sấy</a></li>
+        <li data-i18n="t158"><a href="#">Giặt hấp</a></li>
+        <li data-i18n="t159"><a href="#">Vệ sinh giày</a></li>
+        <li data-i18n="t160"><a href="#">Sofa, nệm, rèm, thảm</a></li>
+        <li data-i18n="t161"><a href="#">Vệ sinh máy lạnh</a></li>
+        <li data-i18n="t162"><a href="#">Spa túi xách</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="t163">Liên hệ</div>
+      <div class="footer-contact">
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.92 13 19.79 19.79 0 0 1 1.88 4.38 2 2 0 0 1 3.85 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6.11 6.11l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+          <strong>1900 3286</strong>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"></rect><path d="M12 18h.01"></path></svg></span>
+          <strong>0868 050 586</strong>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></span>
+          heramo.com
+        </div>
+        <div class="footer-contact-item" data-i18n="t164">
+          <span class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+          8 chi nhánh TP.HCM
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="t165">Tải ứng dụng</div>
+      <div class="footer-app-col">
+        <div style="background:white;border-radius:8px;padding:8px;width:80px;height:80px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" fill="white"></rect><rect x="2" y="2" width="18" height="18" fill="black"></rect><rect x="4" y="4" width="14" height="14" fill="white"></rect><rect x="6" y="6" width="10" height="10" fill="black"></rect><rect x="44" y="2" width="18" height="18" fill="black"></rect><rect x="46" y="4" width="14" height="14" fill="white"></rect><rect x="48" y="6" width="10" height="10" fill="black"></rect><rect x="2" y="44" width="18" height="18" fill="black"></rect><rect x="4" y="46" width="14" height="14" fill="white"></rect><rect x="6" y="48" width="10" height="10" fill="black"></rect><rect x="22" y="2" width="4" height="4" fill="black"></rect><rect x="28" y="2" width="4" height="4" fill="black"></rect><rect x="34" y="2" width="4" height="4" fill="black"></rect><rect x="22" y="8" width="2" height="2" fill="black"></rect><rect x="26" y="6" width="6" height="4" fill="black"></rect><rect x="20" y="20" width="6" height="6" fill="black"></rect><rect x="28" y="20" width="4" height="4" fill="black"></rect><rect x="42" y="20" width="4" height="6" fill="black"></rect><rect x="20" y="28" width="2" height="6" fill="black"></rect><rect x="24" y="30" width="6" height="2" fill="black"></rect><rect x="32" y="28" width="4" height="4" fill="black"></rect><rect x="44" y="28" width="6" height="4" fill="black"></rect><rect x="22" y="44" width="4" height="4" fill="black"></rect><rect x="28" y="44" width="2" height="8" fill="black"></rect><rect x="40" y="44" width="4" height="6" fill="black"></rect><rect x="50" y="44" width="6" height="2" fill="black"></rect><rect x="22" y="50" width="6" height="2" fill="black"></rect><rect x="30" y="50" width="4" height="4" fill="black"></rect><rect x="36" y="52" width="4" height="4" fill="black"></rect><rect x="54" y="50" width="8" height="6" fill="black"></rect></svg>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="#" style="display:inline-block"><img src="assets/apple-button.svg" height="36" alt="App Store"></a>
+          <a href="#" style="display:inline-block"><img src="assets/ch-store-button.svg" height="36" alt="Google Play"></a>
+        </div>
+        <div style="display:none" data-i18n="t166">
+          <a href="#" style="display:inline-block"><svg width="120" height="36" viewBox="0 0 120 36" fill="none"><rect width="120" height="36" rx="6" fill="#000"></rect><rect x=".5" y=".5" width="119" height="35" rx="5.5" stroke="white" stroke-opacity=".35"></rect><g transform="translate(10,7)"><path d="M9 3.3c.5-.6.8-1.4.7-2.2-.7 0-1.6.5-2.1 1.1-.5.5-.9 1.3-.8 2.1.9.1 1.7-.4 2.2-1z" fill="white"></path><path d="M9.9 4.7c-1.1 0-2.1.6-2.7.6-.5 0-1.4-.6-2.3-.6-1.2 0-2.3.7-2.9 1.7-1.2 2.1-.3 5.3.9 7.1.6.8 1.3 1.7 2.2 1.7.9 0 1.2-.6 2.2-.6 1 0 1.3.6 2.2.6 1 0 1.6-.9 2.2-1.7.4-.5.6-1 .8-1.5-2-.7-2.4-3.7-.3-4.9-.4-.6-1.1-1.1-1.9-1.6l-.5-.3z" fill="white"></path></g><text x="30" y="13" font-family="Montserrat,sans-serif" font-size="7" fill="white" opacity=".7">Lấy mã ngay trên</text><text x="30" y="26" font-family="Montserrat,sans-serif" font-size="13" fill="white" font-weight="700">App Store</text></svg></a>
+          <a href="#" style="display:inline-block"><svg width="120" height="36" viewBox="0 0 120 36" fill="none"><rect width="120" height="36" rx="6" fill="#000"></rect><rect x=".5" y=".5" width="119" height="35" rx="5.5" stroke="white" stroke-opacity=".35"></rect><g transform="translate(10,9)"><path d="M0 1L8 8.5 0 16V1z" fill="#EA4335"></path><path d="M0 1L8 8.5l3.5-3L3 0C1.5-.4.5.2 0 1z" fill="#4285F4"></path><path d="M0 16L8 8.5l3.5 3L5 14.5C3.5 16 1.5 16.5 0 16z" fill="#34A853"></path><path d="M8 8.5l3.5-3 2.5 1.5-2.5 1.5-3.5 0z" fill="#FBBC04"></path></g><text x="30" y="13" font-family="Montserrat,sans-serif" font-size="7" fill="white" opacity=".7">Lấy mã ngay trên</text><text x="30" y="26" font-family="Montserrat,sans-serif" font-size="13" fill="white" font-weight="700">Google Play</text></svg></a>
+        </div></div>
+      </div>
+    </div>
+  
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 HERAMO. Vietnam's #1 Premium Laundry &amp; Cleaning Services.</div>
+    <div class="footer-social">
+      <!-- Facebook -->
+      <a href="#" class="social-btn" title="Facebook">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+      </a>
+      <!-- Instagram -->
+      <a href="#" class="social-btn" title="Instagram">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+      </a>
+      <!-- YouTube -->
+      <a href="#" class="social-btn" title="YouTube">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+      </a>
+      <!-- Zalo -->
+      <a href="#" class="social-btn" title="Zalo">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><text x="7" y="14" font-size="7" font-weight="900" fill="currentColor" stroke="none" font-family="Montserrat,sans-serif">Z</text></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="float-contacts">
+  <a href="https://zalo.me/heramo" target="_blank" class="float-btn float-zalo" title="Chat Zalo">
+    <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="16" fill="white"></rect><text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-size="11" font-weight="900" fill="#0068ff" font-family="Montserrat,sans-serif">Zalo</text></svg>
+  </a>
+  <a href="tel:19003286" class="float-btn float-hotline" title="Hotline 1900 3286">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.92 13 19.79 19.79 0 0 1 1.88 4.38 2 2 0 0 1 3.85 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6.11 6.11l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+  </a>
+  <a href="https://m.me/heramo.vn" target="_blank" class="float-btn float-messenger" title="Messenger">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.898 1.408 5.49 3.618 7.242V22l3.338-1.833A11.2 11.2 0 0 0 12 20.485c5.523 0 10-4.145 10-9.242C22 6.145 17.523 2 12 2zm1.05 12.45-2.55-2.7-4.975 2.7 5.476-5.8 2.612 2.7 4.913-2.7-5.476 5.8z"></path></svg>
+  </a>
+</div>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <div class="popup-top">
+      <button class="popup-close" onclick="closePopup()">×</button>
+      <div class="popup-stamp" data-i18n="t167">Ưu đãi dành riêng cho bạn</div>
+      <div class="popup-headline" data-i18n="t168">FREESHIP<span>2 chiều tối đa 50K</span></div>
+      <div class="popup-sublabel" data-i18n="t169">Cho đơn đầu tiên - Đặt ngay hôm nay</div>
+    </div>
+    <div class="popup-body">
+      <form class="popup-form" id="popupForm" onsubmit="claimPromoCode(event)">
+        <input class="popup-input" id="popupName" type="text" placeholder="Tên của bạn" required="" data-i18n-attr="placeholder=a14">
+        <input class="popup-input" id="popupPhone" type="tel" placeholder="SĐT của bạn" pattern="[0-9+\\s]{9,15}" required="" data-i18n-attr="placeholder=a15">
+        <div class="popup-error" id="popupError"></div>
+        <button type="submit" class="popup-cta" data-i18n="t170">Nhận mã ngay →</button>
+      </form>
+      <div class="popup-timer" id="popupTimer" data-i18n="t171">Ưu đãi kết thúc sau <span id="countdown">09:59</span></div>
+      <div class="popup-success" id="popupSuccess">
+        <div class="popup-code-row" data-i18n="t172">
+          <span class="popup-code" id="popupCode">WELCOME100M50</span>
+          <button class="popup-code-copy" onclick="copyPromoCode()" aria-label="Sao chép mã" data-i18n-attr="aria-label=a16"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button>
+        </div>
+        <div class="popup-success-text" data-i18n="t173">Tải app hoặc liên hệ HERAMO để sử dụng ưu đãi liền tay!</div>
+        <div class="popup-success-ctas" data-i18n="t174">
+          <a href="https://heramo.com/tai-app" class="popup-success-cta popup-success-cta-primary">TẢI ỨNG DỤNG</a>
+          <a href="https://m.me/heramo" class="popup-success-cta popup-success-cta-secondary">CHAT VỚI HERAMO NGAY</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="heramo.js"></script>
+</body>
+</html>
