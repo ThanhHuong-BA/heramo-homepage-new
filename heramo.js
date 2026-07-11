@@ -833,7 +833,11 @@ function injectLangSwitcher() {
   }
   const drawerLinks = document.querySelector('.nav-drawer-links');
   if (drawerLinks) {
-    drawerLinks.parentElement.appendChild(buildSwitcher(true));
+    const panel = drawerLinks.parentElement;
+    const cta = panel.querySelector('.nav-drawer-cta');
+    // Place the switcher above the CTA (right after the links list)
+    if (cta) panel.insertBefore(buildSwitcher(true), cta);
+    else panel.appendChild(buildSwitcher(true));
   }
 }
 
